@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homelay — Smart Home Inventory for the Modern Space</title>
+    <title>Homelay — The Intelligent Home Inventory App</title>
     <style>
         :root {
             --linen: #F5F2ED;
@@ -42,25 +42,16 @@
         /* --- Hero Section --- */
         .hero {
             text-align: center;
-            padding: 80px 0 60px;
+            padding: 60px 0 60px;
         }
 
         .app-icon {
             width: 100px;
             height: 100px;
-            background: linear-gradient(135deg, var(--brass), #A08060);
             border-radius: 24px;
             margin: 0 auto 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: block;
             box-shadow: 0 12px 32px rgba(158, 133, 104, 0.25);
-        }
-
-        .app-icon svg {
-            width: 50px;
-            height: 50px;
-            fill: white;
         }
 
         .app-name {
@@ -72,16 +63,19 @@
         }
 
         .app-headline {
-            font-size: 48px;
+            font-size: 42px;
             margin-bottom: 24px;
             line-height: 1.1;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .app-description {
-            font-size: 20px;
+            font-size: 19px;
             color: var(--subtle-text);
             font-weight: 300;
-            max-width: 600px;
+            max-width: 650px;
             margin: 0 auto 40px;
         }
 
@@ -122,12 +116,36 @@
             background-color: var(--brass-light);
         }
 
+        /* --- Section Divider --- */
+        .divider {
+            text-align: center;
+            margin: 80px 0;
+            font-style: italic;
+            color: var(--brass);
+            font-family: serif;
+        }
+
         /* --- Features --- */
         .features {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 24px;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 40px;
             margin-bottom: 80px;
+        }
+
+        .feature-block h2 {
+            font-size: 14px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--brass);
+            margin-bottom: 12px;
+        }
+
+        .feature-block p {
+            font-size: 17px;
+            color: var(--charcoal);
+            font-weight: 300;
+            line-height: 1.5;
         }
 
         .feature-card {
@@ -136,23 +154,34 @@
             border-radius: 20px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
             border: 1px solid rgba(38, 35, 30, 0.03);
-            text-align: center;
-        }
-
-        .feature-icon {
-            font-size: 24px;
-            margin-bottom: 16px;
-            display: block;
         }
 
         .feature-title {
             font-size: 20px;
             margin-bottom: 12px;
+            font-family: serif;
         }
 
         .feature-text {
             font-size: 15px;
             color: var(--subtle-text);
+        }
+
+        /* --- Philosophy --- */
+        .philosophy {
+            text-align: center;
+            max-width: 600px;
+            margin: 100px auto;
+            padding: 40px;
+            background-color: var(--brass-light);
+            border-radius: 30px;
+        }
+
+        .philosophy p {
+            font-family: serif;
+            font-size: 20px;
+            font-style: italic;
+            color: var(--charcoal);
         }
 
         /* --- Footer --- */
@@ -187,10 +216,10 @@
                 padding: 40px 0;
             }
             .app-headline {
-                font-size: 34px;
+                font-size: 32px;
             }
-            .app-description {
-                font-size: 17px;
+            .features {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -198,14 +227,10 @@
 <body>
     <div class="container">
         <section class="hero">
-            <div class="app-icon">
-                <svg viewBox="0 0 24 24">
-                    <path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z" />
-                </svg>
-            </div>
+            <img src="app-icon.png" alt="Homelay Icon" class="app-icon">
             <div class="app-name">Homelay</div>
-            <h1 class="app-headline">Quiet Luxury for Your Home Inventory</h1>
-            <p class="app-description">Curate your space with a calm, editorial-grade inventory experience. Organize, elevate, and complete your home layers.</p>
+            <h1 class="app-headline">The intelligent home inventory app for people who think before they buy.</h1>
+            <p class="app-description">Whether you're moving into your first apartment or finally styling your forever home, Homelay guides you through every layer of home ownership, from the non-negotiables to the finishing touches that make a space feel truly yours.</p>
             
             <div class="cta-group">
                 <a href="#" class="button button-primary">Download on the App Store</a>
@@ -214,21 +239,39 @@
         </section>
 
         <section class="features">
-            <div class="feature-card">
-                <span class="feature-icon">✨</span>
-                <h3 class="feature-title">Layered Curation</h3>
-                <p class="feature-text">Organize your home into logical layers, from foundational essentials to aesthetic finishing touches.</p>
+            <div class="feature-block">
+                <h2>Set up your home the right way</h2>
+                <p>Not everything belongs in your home at the same time. Homelay's layered system helps you prioritize the essentials first, then build comfort, and finally add character; so you always know what matters most right now.</p>
             </div>
-            <div class="feature-card">
-                <span class="feature-icon">☁️</span>
-                <h3 class="feature-title">iCloud Sync</h3>
-                <p class="feature-text">Your inventory stays with you. Securely synced across all your iOS and iPadOS devices automatically.</p>
+
+            <div class="feature-block">
+                <h2>Swipe to categorize</h2>
+                <p>Go room by room and swipe to tell Homelay what you own, what you need, and what's on your wishlist. It's fast, focused, and satisfying.</p>
             </div>
-            <div class="feature-card">
-                <span class="feature-icon">🏺</span>
-                <h3 class="feature-title">Quiet Aesthetics</h3>
-                <p class="feature-text">Designed with a warm, minimalist palette that feels like a luxury interior design magazine.</p>
+
+            <div class="feature-block">
+                <h2>Know your readiness score</h2>
+                <p>Your Home Readiness Score shows you exactly how prepared your home is at a glance, updated instantly as you tick things off.</p>
             </div>
+
+            <div class="feature-block">
+                <h2>Track what to buy next</h2>
+                <p>Pin items as priority purchases and they'll surface right on your dashboard. Never forget what you were supposed to pick up.</p>
+            </div>
+
+            <div class="feature-block">
+                <h2>Collect inspiration</h2>
+                <p>Save product links, images, and references to each item. When you're ready to buy, everything is exactly where you left it.</p>
+            </div>
+
+            <div class="feature-block">
+                <h2>Built for every home</h2>
+                <p>From a studio apartment to a family house, Homelay adapts to your rooms, your style, and your pace.</p>
+            </div>
+        </section>
+
+        <section class="philosophy">
+            <p>"Homelay is for people who want a calm, organized home; not another app that overwhelms them."</p>
         </section>
 
         <footer>
